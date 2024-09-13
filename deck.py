@@ -38,15 +38,12 @@ class Deck:
     def make_deck():  
         cards = [] 
         suits = ["♠", "♥", "♣", "♦"]
-        values = ["Ess", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
-        
+        values = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
        
         for suit in suits:   # 4 suits
-            current_suit = suit 
-
             for value in values: # 13 values per suit
-                current_value = value
-                cards.append(Card(current_suit, current_value)) 
+                cards.append(Card(suit, value)) 
+                
         return cards
 
 
