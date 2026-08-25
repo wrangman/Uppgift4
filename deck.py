@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 class Card:
     def __init__(self, suit, value):
@@ -21,7 +22,8 @@ class Deck:
     def show_all(self):
         for card in self.cards: 
             if card.suit == "♥" or card.suit == "♦": #om det är röda kort ändra färgen på texten med denna ansi-kod
-                print(f"\033[31m{card}\033[0m")
+               #  print(f"\033[31m{card}\033[0m")
+                print(f"{card}")
             else:
                 print(f"{card}")
 
@@ -42,12 +44,12 @@ class Deck:
        
         for suit in suits:   # 4 suits
             for value in values: # 13 values per suit
-                cards.append(Card(suit, value)) 
+                cards.append(Card(suit, value))    
                 
         return cards
 
 
-os.system('cls' if os.name == 'nt' else 'clear')
+subprocess.run('cls' if os.name == 'nt' else 'clear', shell=True)
 
 cards = Deck.make_deck()
 
