@@ -10,7 +10,7 @@ class Card:
         return f"{self.suit} {self.value}"
     
     def __repr__(self):
-        return f"{self.suit} {self.value}"
+        return f"Card('{self.suit}', {self.value})"
         
     
 class Deck:
